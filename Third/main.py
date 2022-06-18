@@ -16,8 +16,6 @@ def calc_metric(image, x, y, w, h):
     label_counts = Counter(labels)
 
     dominant_color = ctl.cluster_centers_[label_counts.most_common(1)[0][0]]
-    
-    ctl.fit(img.reshape(-1, 3))
 
     plt.imshow(img)
     plt.show()
